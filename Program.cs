@@ -10,17 +10,27 @@
 //Kontynuuj tę sekwencję ataków, dopóki liczba punktów zdrowia bohatera lub potwora nie będzie mniejsza ani równa zero.
 //Wyświetl, kto zwyciężył.
 
-
+// C# program to illustrate the
+// Console.WindowHeight Property 
+using RPGGame;
+// Set the WindowHeight
+Console.WindowHeight =50;
+Console.WindowWidth = 100;
+// Get the WindowHeight
+//Console.Write("Changed WindowHeight: {0}\n",Console.WindowHeight);
 int health = 10;
 int monster = health;
 int hero = health;
 int tura = 0;
 Random dice = new Random();
-Console.WriteLine($"RPG GAME -ZABIJ POTWORA\n");
-Console.WriteLine("1.Bohater posiada  {0} punktow zdrowia",hero);
-Console.WriteLine("2.Potwor posiada {0} punktow zdrowia\n ",monster);
+Console.WriteLine($" \t\t\t\t"+"RPG GAME -ZABIJ POTWORA");
+Console.Write("Bohater posiada  {0} punktow zdrowia\t", hero);
+Console.WriteLine("Potwor posiada {0} punktow zdrowia ", monster);
+Console.WriteLine(@"Zmienna roll przyjmuje wartosci Random od 1 do 10.
+Jest odejmowana od zdrowia bohatera i potwora.Jak zycie sie skonczy, gra sie konczy.");
 RenderLine(Console.WindowWidth);
-static void RenderLine(int WithCHange)
+
+static void RenderLine(int widthChange)
 {
     for (int i = 0; i < Console.WindowWidth; i++) Console.Write("-");
     Console.WriteLine($"\n");
@@ -32,15 +42,29 @@ do
     monster -= roll;
     tura++;
 
-    Console.WriteLine("Tura:{0}",tura);
-    Console.WriteLine("Bohater bije potwora {0 } punktow ",hero);
-    Console.WriteLine("Potwor posiada teraz {0} punktow\n",monster);
-    if (monster <= 0) continue;
-    roll = dice.Next(1, health + 1);
-    hero -= roll;
-    Console.WriteLine($"Potwor bije bohatera o { roll} punktow ");
-    Console.WriteLine($"Bohater posiada teraz { hero} punktow\n");
+    Console.WriteLine("Tura:{0}", tura);
+    Console.WriteLine("Bohater bije potwora {0 } punktow ", roll);
+    Console.WriteLine("Potwor posiada teraz {0} punktow\n", monster);
+    if (monster > 0)
+    {
+        roll = dice.Next(1, health + 1);
+        hero -= roll;
+        Console.WriteLine("Potwor bije bohatera o {0} punktow ", roll);
+        Console.WriteLine("Bohater posiada teraz {0} punktow\n", hero);
+    }
 } while (monster > 0 && hero > 0);
-Console.WriteLine($"Bohater posiada teraz {hero} punktow");
-Console.WriteLine($"Potwor posiada teraz {monster} punktow\n");
-Console.WriteLine(hero > monster ? "Wygrales!" : "Przegrales!");
+//Console.WriteLine($"Bohater posiada teraz {hero} punktow");
+//Console.WriteLine($"Potwor posiada teraz {monster} punktow\n");
+if (hero > monster)
+{
+    Console.WriteLine("Wygrales!");
+    Console.WriteLine(new Hero());
+}
+
+else
+{
+    Console.WriteLine("Przegrales.Potwor zwycieza!");
+    Console.WriteLine(new Dragon());
+}
+
+//Console.ReadLine();
