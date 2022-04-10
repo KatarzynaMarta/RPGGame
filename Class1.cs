@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace RPGGame
 {
-    internal class Class1
+    internal class Hero
+        public class Hero(Game game)    
+
     {
     }
 }
