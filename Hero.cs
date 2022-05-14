@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RPGGame
+﻿namespace RPGGame
 {
-    internal class Hero
+    public class Hero
+      
     {
-        public Hero()
+        public int Health { get ; set ; }
+        public string? RoundsWon { get; set; }
+
+        
+        public void HeroImage()
         {//https://ascii.co.uk/art/knights
             Console.WriteLine($@"    
                             .oo.

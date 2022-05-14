@@ -1,8 +1,8 @@
 ﻿namespace RPGGame
 {
-    internal class Dragon
+    public class Dragon
     {
-        public Dragon()
+        public void DragonImage()
         {//https://textart.io/art/tag/dragon
             Console.WriteLine($@"    
                                                                             /===-_---~~~~~~~~~------____
