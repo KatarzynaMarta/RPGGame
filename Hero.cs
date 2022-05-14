@@ -6,7 +6,10 @@
         public int Health { get ; set ; }
         public string? RoundsWon { get; set; }
 
-        
+        public Hero()
+        {
+            Health = 10;
+        }
         public void HeroImage()
         {//https://ascii.co.uk/art/knights
             Console.WriteLine($@"    

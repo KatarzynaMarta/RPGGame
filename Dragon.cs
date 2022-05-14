@@ -1,6 +1,6 @@
 ﻿namespace RPGGame
 {
-    public class Dragon
+    public class Monster
     {
         public void DragonImage()
         {//https://textart.io/art/tag/dragon
