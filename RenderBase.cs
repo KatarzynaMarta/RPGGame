@@ -12,21 +12,21 @@ namespace RPGGame
             this.windowWidth = windowWidth;
         }
 
-        static void RenderLine(int widthChange)
+        public static void RenderLine(int widthChange)
         {
             if (widthChange > 0)
                 for (int i = 0; i < widthChange; i++)
                 {
-                    Console.WriteLine("-");
+                    Console.Write("-");
                 }
             else
             {
                 for (int i = widthChange; i < 0; i++)
                 {
-                    Console.WriteLine("\b");
+                    Console.Write("\b");
                 }
             }
-
+            Console.Write("\n");
         }
     }
 }

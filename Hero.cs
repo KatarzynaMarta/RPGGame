@@ -1,16 +1,18 @@
 ﻿namespace RPGGame
 {
-    public class Hero
-      
+    public class Hero : IPlayer
+
     {
         public int Health { get ; set ; }
-        public string? RoundsWon { get; set; }
-
+        public int? RoundsWon { get ; set ; }
         public Hero()
         {
             Health = 10;
+            RoundsWon = -1;
         }
-        public void HeroImage()
+
+
+        public void Image()
         {//https://ascii.co.uk/art/knights
             Console.WriteLine($@"    
                             .oo.
