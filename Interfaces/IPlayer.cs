@@ -1,18 +1,14 @@
 ﻿namespace RPGGame
 {
-    public class Monster:IPlayer
+    public interface IPlayer
     {
-        public Monster()
-        {
-            Health = 10;
-           
-        }
+        int Health { get; set; }
+        int? RoundsWon { get; }
+        int Level { get; set; }
+        int Gold { get; set; }
 
-        public int Health { get ; set ; }
 
-        public int? RoundsWon { get; set ; }
-
-        public void Image()
+        void Image()
         {//https://textart.io/art/tag/dragon
             Console.WriteLine($@"    
                                                                             /===-_---~~~~~~~~~------____
@@ -44,7 +40,5 @@
                           ' ') '( (/
                              '   '  `");
         }
-
-        
     }
 }

@@ -2,7 +2,8 @@
 
 
 //Reguły gry
-//Bohater i potwór rozpoczną grę z 10 punktami zdrowia.
+//Bohater  rozpoczną grę z 10 punktami zdrowia.
+//Potwor moze miec zdorwie od 1 do 10.
 //Wszystkie ataki będą mieć wartość z przedziału od 1 do 10.
 //Bohater atakuje jako pierwszy.
 //Wyświetl liczbę punktów zdrowia utraconą przez potwora oraz liczbę jego pozostałych punktów zdrowia.
@@ -12,7 +13,5 @@
 //Wyświetl, kto zwyciężył.
 
 Console.WriteLine($"RPG GAME -ZABIJ POTWORA\n");
-
-
 
 GameRounds.GameOn();
