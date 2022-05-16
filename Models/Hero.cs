@@ -5,10 +5,16 @@
     {
         public int Health { get ; set ; }
         public int? RoundsWon { get ; set ; }
+        public int Level { get ; set ; }
+        public int Gold { get ; set ; }
+
         public Hero()
         {
             Health = 10;
-            RoundsWon = -1;
+            RoundsWon = 0;
+            Gold = 0;
+            Level = 0;
+
         }
 
 

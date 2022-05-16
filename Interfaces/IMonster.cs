@@ -1,6 +1,6 @@
 ﻿namespace RPGGame
 {
-    public interface IPlayer
+    public interface IMonster
     {
         int Health { get; set; }
         int? RoundsWon { get; }
