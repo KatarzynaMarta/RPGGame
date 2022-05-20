@@ -89,15 +89,15 @@ namespace RPGGame
 
             do
             {
-                
-                int mHealth = dice.Next(1, monster.Health + 1); //random monster health
+                //int mHealth = 10;
+                int mHealth = dice.Next(1, monster.Health + hero.Level + 1); //random monster health
                 RenderBase.RenderLine(windowWidth);
                 CBlue();
                 Console.WriteLine("\n1.Bohater posiada:\t{0}\tpunktow zdrowia", hero.Health);
                 CWhite();
                 Console.WriteLine("2.Potwor posiada:\t{0}\tpunktow zdrowia ", mHealth);
                 RenderBase.RenderLine(windowWidth);
-
+                
                 GameRound(ref mHealth, hero);
                 
                 Statistics.Stats(hero);
