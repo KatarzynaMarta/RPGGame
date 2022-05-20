@@ -8,7 +8,7 @@
         public Store()
         {
             ZElixir = 20;
-            SElixir = 150;
+            SElixir = 40;
         }
 
         public static void Buy(Hero hero)
@@ -46,6 +46,23 @@
                         Console.ReadKey();
                     };
                     }
+                if (key_lower == "s")
+                {
+                    if (hero.Gold >= SElixir)
+                    {
+                        Console.WriteLine("Kupiles eliksir sily\n");
+
+                        
+                        { hero.Gold -= SElixir;
+                            hero.Damage = hero.Damage + 10;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Masz za malo pieniedzy.\n");
+                        Console.ReadKey();
+                    };
+                }
             }
 
             RenderBase.RenderLine(Console.WindowWidth);

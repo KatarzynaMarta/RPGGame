@@ -34,7 +34,7 @@ namespace RPGGame
             //rozgrywka
             do
             {
-                int roll = dice.Next(1, hit + 1);
+                int roll = dice.Next(1, hit+hero.Damage + 1);
                 mHealth -= roll;
                 round++;
                 CYellow();
@@ -90,7 +90,7 @@ namespace RPGGame
             do
             {
                 //int mHealth = 10;
-                int mHealth = dice.Next(1, monster.Health + hero.Level + 1); //random monster health
+                int mHealth = dice.Next(1, monster.Health + hero.Level); //random monster health
                 RenderBase.RenderLine(windowWidth);
                 CBlue();
                 Console.WriteLine("\n1.Bohater posiada:\t{0}\tpunktow zdrowia", hero.Health);

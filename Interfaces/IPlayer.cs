@@ -6,6 +6,7 @@
         int? RoundsWon { get; }
         int Level { get; set; }
         int Gold { get; set; }
+        int Damage { get; set; }
 
 
         void Image()

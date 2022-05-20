@@ -7,6 +7,7 @@
         public int? RoundsWon { get ; set ; }
         public int Level { get ; set ; }
         public int Gold { get ; set ; }
+        public int Damage { get ; set; }
 
         public Hero()
         {
@@ -14,7 +15,7 @@
             RoundsWon = 0;
             Gold = 0;
             Level = 0;
-
+            Damage = 0;
         }
 
 
