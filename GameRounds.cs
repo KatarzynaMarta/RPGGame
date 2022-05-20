@@ -22,7 +22,7 @@ namespace RPGGame
         public static void GameRound(ref int mHealth, Hero hero)
         {
             Random dice = new Random();
-
+            
             //klasy przywolane 
             // Hero hero = new Hero();
             Monster monster = new Monster();
@@ -89,6 +89,7 @@ namespace RPGGame
 
             do
             {
+                
                 int mHealth = dice.Next(1, monster.Health + 1); //random monster health
                 RenderBase.RenderLine(windowWidth);
                 CBlue();
@@ -98,9 +99,10 @@ namespace RPGGame
                 RenderBase.RenderLine(windowWidth);
 
                 GameRound(ref mHealth, hero);
+                
                 Statistics.Stats(hero);
                 //Sklep
-                if (hero.Health >= 0)
+                if (hero.Health > 0)
                 {
                    Console.WriteLine("Sklep ? y/n");
                     // var key = Console.ReadKey();
@@ -111,14 +113,15 @@ namespace RPGGame
                         Console.Clear();
                         Store.Buy(hero);
                         
-                    };
+                    }
+                    Console.Clear(); ;
                                        
                 }
                
             }
             while (hero.Health > 0);
             {
-               
+                
                 Console.WriteLine("____________________________________________");
             };
 
