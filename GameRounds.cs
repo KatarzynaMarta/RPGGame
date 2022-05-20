@@ -102,11 +102,7 @@ namespace RPGGame
                 //Sklep
                 if (hero.Health >= 0)
                 {
-<<<<<<< HEAD
                    Console.WriteLine("Sklep ? y/n");
-=======
-                   Console.WriteLine("Sklep ? y");
->>>>>>> 5b105f35d2c0a0c7ebec2b26552b6894f31749b2
                     // var key = Console.ReadKey();
                     bool key =ConfirmKey();
                     Console.WriteLine(key); 
